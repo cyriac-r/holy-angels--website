@@ -1,0 +1,59 @@
+.header-logotype {
+    padding: 0.5em 0;
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    align-content: center;
+    justify-content: flex-start;
+    @media only screen and (min-width: $breakpoint-med) {
+        padding: 0.75em 0;
+    }
+}
+
+.header-logotype__link {
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-medium;
+    font-size: 1rem;
+    line-height: 1.2;
+    text-decoration: underline;
+    // text-decoration-thickness: 3px;
+    -webkit-text-decoration-skip-ink:none;
+    text-decoration-skip-ink:none;
+    -webkit-text-decoration-skip:none;
+    text-decoration-skip:none;
+    width: auto;
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline:3px solid transparent;
+        color: $dark-grey;
+        background-color:#fd0;
+        -webkit-box-shadow:0 -2px #fd0,0 4px $dark-grey;
+        box-shadow:0 -2px #fd0,0 4px $dark-grey;
+        text-decoration:none
+    }
+
+    @media only screen and (min-width: $breakpoint-med) {
+        font-size: 1.777rem;
+    }
+}
+
+.header-donate {
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    justify-content: flex-end;
+    align-content: center;
+    padding: 0.5em 0;
+    @media only screen and (min-width: $breakpoint-med) {
+        padding: 0.75em 0;
+    }
+}

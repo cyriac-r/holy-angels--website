@@ -1,0 +1,97 @@
+.primary-button {
+    background-color: $link-colour;
+    padding: 0.75rem 1.25rem;
+    color: white;
+
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-medium;
+    font-size: 1rem;
+    line-height: 1;
+    text-decoration: underline;
+    // text-decoration-thickness: 3px;
+    -webkit-text-decoration-skip-ink:none;
+    text-decoration-skip-ink:none;
+    -webkit-text-decoration-skip:none;
+    text-decoration-skip:none;
+
+    border-radius: $border-width-large;
+    cursor: pointer;
+    vertical-align: top;
+    position: relative;
+    box-shadow: 0 $border-width-large 0 $dark-grey;
+
+
+
+    /* 2 */
+    &:link,
+    &:visited,
+    &:active,
+    &:hover {
+        color: $pure-white;
+        text-decoration: none;
+    }
+
+    /* 3 */
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    &:hover {
+        background-color: $link-hover-colour;
+    }
+
+    &:focus {
+        background: $link-focus-colour;
+        box-shadow: 0 $border-width-large 0 $dark-grey;
+        color: $dark-grey;
+        outline: $border-width-large solid transparent;
+
+        &:visited {
+        color: $dark-grey;
+
+            &:active {
+                color: $pure-white;
+            }
+
+        }
+    }
+
+    &:active {
+        background: $link-hover-colour;
+        box-shadow: none;
+        color: $pure-white;
+        top: $border-width-large;
+    }
+
+    /* 4 */
+    &::before {
+        background: transparent;
+        bottom: -($border-width-small + $border-width-large);
+        content: '';
+        display: block;
+        left: -$border-width-small;
+        position: absolute;
+        right: -$border-width-small;
+        top: -$border-width-small;
+    }
+
+    //
+    // When the button is active it is shifted down by $button-shadow-size to
+    // denote a 'pressed' state. If the user happened to click at the very top
+    // of the button, their mouse is no longer over the button (because it has
+    // 'moved beneath them') and so the click event is not fired.
+    //
+    // This corrects that by shifting the top of the pseudo element so that it
+    // continues to cover the area that the user originally clicked, which means
+    // the click event is still fired.
+    //
+
+    &:active::before {
+        top: -($border-width-small + $border-width-large);
+    }
+
+    @media only screen and (min-width: $breakpoint-med) {
+        font-size: 1.125rem;
+    }
+}

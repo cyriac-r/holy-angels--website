@@ -4,14 +4,29 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
-	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+	<meta name="description" content="Holy Angels Catholic Church – Hale Barns, Cheshire – holyangels.org.uk">
+	<meta name="author" content="SitePoint">
+
+	<meta property="og:title" content="Holy Angels Catholic Church – Hale Barns">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+	<meta property="og:description" content="Holy Angels Catholic Church webstie – find mass timings and other events">
+	<meta property="og:image" content="image.png">
+
+	<link rel="icon" href="/favicon.ico">
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="stylesheet" href="{{ '/css/base.css' | url }}" />
 </head>
 <body>
-	<header>
-		<h1>{{ title }}</h1>
-	</header>
+	{% include 'header.njk' %}
+
 	<main>
-	{{ content | safe }}
+		{{ content | safe }}
 	</main>
+
+	{% include 'footer.njk' %}
+
+	<script src="js/scripts.js"></script>
 </body>
 </html>

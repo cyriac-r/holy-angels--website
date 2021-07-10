@@ -1,0 +1,98 @@
+$navigation-height: 50px;
+
+.header-navigation {
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-medium;
+  font-size: 1rem;
+  line-height: 1;
+  box-sizing: border-box;
+  background-color: $light-grey;
+
+  @media only screen and (min-width: $breakpoint-med) {
+    font-size: 1.125rem;
+  }
+}
+
+.header-navigation__list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  position: relative;
+  left: -12px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0;
+  list-style: none;
+  width: 100% !important;
+}
+
+.header-navigation__list::webkit-scrollbar {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+    display: none;
+}
+
+.header-navigation__list--item {
+  box-sizing: border-box;
+  position: relative;
+  flex: 0 0 auto;
+  height: $navigation-height;
+  padding: 0 12px;
+  float: left;
+  line-height: $navigation-height;
+  color: $link-colour;
+}
+
+.header-navigation__link {
+  text-decoration: none;
+  color: currentColor;
+
+  &:hover {
+    color: $link-hover-colour;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    -webkit-text-decoration-skip-ink:none;
+    text-decoration-skip-ink:none;
+    -webkit-text-decoration-skip:none;
+    text-decoration-skip:none;
+  }
+
+  &:active {
+    color: $dark-grey;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline:3px solid transparent;
+    color: $dark-grey;
+    background-color:#fd0;
+    -webkit-box-shadow:0 -2px #fd0,0 4px $dark-grey;
+    box-shadow:0 -2px #fd0,0 4px $dark-grey;
+    text-decoration:none
+  }
+
+  // Extend the touch area of the link to the list
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.header-navigation__list-item--current {
+  border-bottom: 4px solid $dark-grey;
+  font-weight: $font-weight-medium;
+  color: $dark-grey;
+}
+
+.header-navigation__list-item--current .header-navigation__link:hover {
+  text-decoration: none;
+}

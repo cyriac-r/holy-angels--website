@@ -1,0 +1,66 @@
+<header>
+	<div class="container">
+        <div class="row">
+            <div class="col-9 col-6-sm header-logotype">
+                <a href="" class="header-logotype__link">
+                    Holy Angels Catholic Church <span class="font-regular">– Hale Barns</span>
+                </a>
+            </div>
+            <div class="col-3 col-6-sm right header-donate">
+                <a href="" class="primary-button">
+                    Donate
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="header-navigation">
+        <nav class="container">
+            <div class="row">
+                <ul class="col-12 header-navigation__list">
+                    <li class="header-navigation__list--item header-navigation__list-item--current">
+                        <a href="#" class="header-navigation__link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="header-navigation__list--item">
+                        <a href="#" class="header-navigation__link">
+                            About
+                        </a>
+                    </li>
+                    <li class="header-navigation__list--item">
+                        <a href="#" class="header-navigation__link">
+                            Contact us
+                        </a>
+                    </li>
+                    <li class="header-navigation__list--item">
+                        <a href="#" class="header-navigation__link">
+                            Contact us
+                        </a>
+                    </li>
+                    <li class="header-navigation__list--item">
+                        <a href="#" class="header-navigation__link">
+                            Contact us
+                        </a>
+                    </li>
+                    <li class="header-navigation__list--item">
+                        <a href="#" class="header-navigation__link">
+                            Contact us
+                        </a>
+                    </li>
+                </ul>
+                {# {% set navPages = collections.all | eleventyNavigation %}
+                <ul>
+                {%- for entry in navPages %}
+                <li
+                    {% if entry.url == page.url %} class="nav-active"{% endif %}>
+                    <a href="{{ entry.url | url }}">
+                        {{ entry.title }}
+                    </a>
+                </li>
+                {%- endfor %}
+                </ul> #}
+            </div>
+        </nav>
+    </div>
+</header>
