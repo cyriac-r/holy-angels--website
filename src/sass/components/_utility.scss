@@ -33,3 +33,37 @@
 .border-top {
     border-top: 1px solid $border-colour;
 }
+
+.feature-image {
+    object-fit: cover;
+	object-position: 50% 50%;
+    margin-bottom: 1em;
+}
+
+.heading-xs {
+    font-family: $font-family-sans-serif;
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: $font-weight-medium;
+    margin: 0 0 0.5rem;
+    @media only screen and (min-width: $breakpoint-med) {
+        font-size: 1.125rem;
+        margin: 0 0 1rem;
+    }
+}
+
+.margin-bottom-s {
+    margin-bottom: 1rem;
+
+    @media only screen and (min-width: $breakpoint-med) {
+        margin-bottom: 2rem;
+    }
+}
+
+.margin-bottom-xs {
+    margin-bottom: 0.5rem;
+
+    @media only screen and (min-width: $breakpoint-med) {
+        margin-bottom: 0.75rem;
+    }
+}
